@@ -4,5 +4,5 @@
     $senha = "";
     $base = "trabalho_php";
 
-    $conexao = mysqli_connect($descricao, $marca, $estoque, $preco);
+    $conexao = mysqli_connect($endereco, $usuario, $senha, $base);
 ?>
