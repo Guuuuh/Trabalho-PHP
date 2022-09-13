@@ -1,16 +1,16 @@
 <?php 
-    $id = $_GET['id']; 
+    $id = $_GET['id']; //
 
     require('conexao.php');
     $resultado = mysqli_query($conexao, "SELECT * FROM produtos WHERE id = $id");
-    $usuario = mysqli_fetch_assoc($resultado);
+    $usuario = mysqli_fetch_assoc($resultado); // alterar usuario para produtos ?, isso aqui é um array?, 
 ?>
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cadastro</title>
+    <title>Editar produtos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </head>
@@ -20,7 +20,7 @@
             <form action="update.php" method="post">
                 <div class="mb-3">
                     <label for="descricao" class="form-label">Descrição:</label>
-                    <input type="text" class="form-control" id="descricao" name="descricao" value="<?=$usuario['Descricao']?>">
+                    <input type="text" class="form-control" id="descricao" name="descricao" value="<?=$usuario['descricao']?>"> // como que eu pego isso que ta sendo alterado e jogo pro update, (aqui não esta sendo alterado nada ?) 
                 </div>
                 <div class="mb-3">
                     <label for="marca" class="form-label">Marca:</label>
@@ -35,7 +35,7 @@
                     <input type="number" class="form-control" id="preco" name="preco" value="<?=$usuario['preco']?>">
                 </div>
                 <div class="mb-3 ">
-                    <input type="submit" class="form-control w-25 bg-primary">
+                    <input type="submit" class="form-control w-25 bg-primary" value="Atualizar">
                 </div>
             </form>
         </div>

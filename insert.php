@@ -40,7 +40,7 @@
 
             if ($erros == 0) {
                 $sql = "INSERT INTO produtos (id, descricao, marca, preco, estoque) 
-                    VALUES (null , '$decricao', '$marca', '$estoque', '$preco')";
+                    VALUES (null , '$descricao', '$marca', '$estoque', '$preco')";
 
                 $resultado = mysqli_query($conexao, $sql);
             }
