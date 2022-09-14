@@ -1,9 +1,9 @@
 <?php 
-    $id = $_GET['id']; //
+    $id = $_GET['id'];
 
     require('conexao.php');
     $resultado = mysqli_query($conexao, "SELECT * FROM produtos WHERE id = $id");
-    $usuario = mysqli_fetch_assoc($resultado); // alterar usuario para produtos ?, isso aqui é um array?, 
+    $usuario = mysqli_fetch_assoc($resultado); 
 ?>
 <!doctype html>
 <html lang="en">
@@ -20,7 +20,7 @@
             <form action="update.php" method="post">
                 <div class="mb-3">
                     <label for="descricao" class="form-label">Descrição:</label>
-                    <input type="text" class="form-control" id="descricao" name="descricao" value="<?=$usuario['descricao']?>"> // como que eu pego isso que ta sendo alterado e jogo pro update, (aqui não esta sendo alterado nada ?) 
+                    <input type="text" class="form-control" id="descricao" name="descricao" value="<?=$usuario['descricao']?>">
                 </div>
                 <div class="mb-3">
                     <label for="marca" class="form-label">Marca:</label>
@@ -35,7 +35,7 @@
                     <input type="number" class="form-control" id="preco" name="preco" value="<?=$usuario['preco']?>">
                 </div>
                 <div class="mb-3 ">
-                    <input type="submit" class="form-control w-25 bg-primary" value="Atualizar">
+                    <a href=<?"update.php?updateid='.$id.'"?>><input type="submit" class="form-control w-25 bg-primary" value="Atualizar" ></a>
                 </div>
             </form>
         </div>
