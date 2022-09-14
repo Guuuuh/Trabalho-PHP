@@ -18,6 +18,7 @@
     <div class="card m-4 bg-secondary"> 
         <div class="card-body">
             <form action="update.php" method="post">
+                <input type="hidden" name="id" value="<?=$usuario['id']?>">
                 <div class="mb-3">
                     <label for="descricao" class="form-label">Descrição:</label>
                     <input type="text" class="form-control" id="descricao" name="descricao" value="<?=$usuario['descricao']?>">
@@ -35,7 +36,7 @@
                     <input type="number" class="form-control" id="preco" name="preco" value="<?=$usuario['preco']?>">
                 </div>
                 <div class="mb-3 ">
-                    <a href=<?"update.php?updateid='.$id.'"?>><input type="submit" class="form-control w-25 bg-primary" value="Atualizar" ></a>
+                    <input type="submit" class="form-control w-25 bg-primary" value="Atualizar" >
                 </div>
             </form>
         </div>
