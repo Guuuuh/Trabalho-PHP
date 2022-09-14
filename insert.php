@@ -39,7 +39,7 @@
             $resultado = false;
 
             if ($erros == 0) {
-                $sql = "INSERT INTO produtos (id, descricao, marca, preco, estoque) 
+                $sql = "INSERT INTO produtos (id, descricao, marca, estoque, preco) 
                     VALUES (null , '$descricao', '$marca', '$estoque', '$preco')";
 
                 $resultado = mysqli_query($conexao, $sql);
