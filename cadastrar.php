@@ -14,8 +14,7 @@
             <h2>Cadastre seu produto:</h2>
         </div>
         <div class="center">
-            <div class="card mb-3 bg-secondary "> 
-            
+            <div class="card mb-3 cor-background"> 
                 <div class="card-body">
                     <form  action="insert.php" method="post" >
                         <div class="mb-3">
@@ -34,10 +33,9 @@
                             <label for="preco" class="form-label">Preço:</label>
                             <input type="number" class="form-control" id="preco" name="preco">
                         </div>
-                        <div class="mb-3 ">
-                            <input type="submit" class="form-control w-25 btn btn-success">
+                        <div class="mb-3">
+                            <input type="submit" class="form-control w-25 btn-enviar">
                         </div>
-                    
                     </form>
                 </div>
             </div>

@@ -28,8 +28,14 @@
     --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   }
-  body{
+ body{
+    font-family: var(--bs-font-monospace);
     margin: auto !important;
-
   }
-
+.cor-background{
+    background-color: #0b47a198;
+}
+.btn-enviar{
+    color: #fff;
+    background-color: #6c757da7;
+}
