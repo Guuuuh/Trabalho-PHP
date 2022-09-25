@@ -13,7 +13,7 @@
         <div class="card-title p-5 text-center">
             <h2>Cadastre seu produto:</h2>
         </div>
-        <div class="center">
+        <div class="">
             <div class="card mb-3 cor-background"> 
                 <div class="card-body">
                     <form  action="insert.php" method="post" >

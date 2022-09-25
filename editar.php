@@ -16,31 +16,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="card m-4 bg-secondary"> 
-        <div class="card-body">
-            <form action="update.php" method="post">
-                <input type="hidden" name="id" value="<?=$produto['id']?>">
-                <div class="mb-3">
-                    <label for="descricao" class="form-label">Descrição:</label>
-                    <input type="text" class="form-control" id="descricao" name="descricao" value="<?=$produto['descricao']?>">
+    <div class="container w-75">
+        <div class="p-5">
+            <div class="card m-4"> 
+                <div class="card-body cor-background">
+                    <form action="update.php" method="post">
+                        <input type="hidden" name="id" value="<?=$produto['id']?>">
+                        <div class="mb-3">
+                            <label for="descricao" class="form-label">Descrição:</label>
+                            <input type="text" class="form-control" id="descricao" name="descricao" value="<?=$produto['descricao']?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="marca" class="form-label">Marca:</label>
+                            <input type="text" class="form-control" id="marca" name="marca" value="<?=$produto['marca']?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="estoque" class="form-label">Estoque:</label>
+                            <input type="number" class="form-control" id="estoque" name="estoque" value="<?=$produto['estoque']?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="preco" class="form-label">Preço:</label>
+                            <input type="number" class="form-control" id="preco" name="preco" value="<?=$produto['preco']?>">
+                        </div>
+                        <div class="mb-3 ">
+                            <input type="submit" class="form-control w-25 btn-enviar" value="Atualizar" >
+                        </div>
+                    </form>
                 </div>
-                <div class="mb-3">
-                    <label for="marca" class="form-label">Marca:</label>
-                    <input type="text" class="form-control" id="marca" name="marca" value="<?=$produto['marca']?>">
-                </div>
-                <div class="mb-3">
-                    <label for="estoque" class="form-label">Estoque:</label>
-                    <input type="number" class="form-control" id="estoque" name="estoque" value="<?=$produto['estoque']?>">
-                </div>
-                <div class="mb-3">
-                    <label for="preco" class="form-label">Preço:</label>
-                    <input type="number" class="form-control" id="preco" name="preco" value="<?=$produto['preco']?>">
-                </div>
-                <div class="mb-3 ">
-                    <input type="submit" class="form-control w-25 bg-primary" value="Atualizar" >
-                </div>
-            </form>
-        </div>
+            </div>
+        </div> 
     </div>
 </body>
 </html>
